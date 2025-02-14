@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="booking.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+<body>
+    <script src="booking.js"></script>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Patient's Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+
+        <hr>
+
+        <div class="elem-group inlined">
+          <label for="checkin-date">Date of appointment</label>
+          <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+
+        <div class="elem-group">
+          <label for="room-selection">Type of illness</label>
+          <select id="room-selection" name="room_preference" required>
+              <option value="General Physician">General Physician</option>
+              <option value="Neurologist">Neurologist</option>
+              <option value="Orthopedic">Orthopedic</option>
+              <option value="Dermatologist">Dermatologist</option>
+              <option value="Gynecologist">Gynecologist</option>
+              <option value="Cardiologist">Cardiologist</option>
+              <option value="Ohters">Others</option>
+          </select>
+        </div>
+
+
+        <div class="elem-group">
+          <label for="room-selection">Hospitals</label>
+          <select id="room-selection" name="room_preference" required>
+              <option value="AIIMS">AIIMS</option>
+              <option value="Apollo Shine Hospital">Apollo Shine Hospital</option>
+              <option value="Manipal Hospital">Manipal Hospital</option>
+              <option value="Akash Healthcare">Akash Healthcare</option>
+          </select>
+        </div>
+
+      
+        <hr>
+        <div class="elem-group">
+          <label for="message">Any special requirement?</label>
+          <textarea id="message" name="visitor_message" placeholder="Any further service required (wheelchair etc)" required></textarea>
+        </div>
+        <button type="submit">Book</button>
+      </form>
+      
+</body>
+</html>
