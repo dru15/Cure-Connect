@@ -3,29 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Home Page</title>
+    <title>Cure Connect</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    
+   
+
+
 </head>
 <body>
-    <div class="navbar" id="myNavbar">
-        <div class="nav-left">
-            <a href="{{ url_for('home') }}" class="active">Home</a>
-            <a href="{{ url_for('about') }}">About</a>
-            <a href="{{ url_for('services') }}">Services</a>
-            <a href="{{ url_for('contact') }}">Contact</a>
-        </div>
-        <div class="nav-right">
-            <a href="{{ url_for('login') }}" class="login-btn">Login</a>
-            <a href="{{ url_for('signup') }}" class="signup-btn">Sign Up</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
-    </div>
+    <script src="script.js"></script>
 
-    <div class="content">
-        <h1>Welcome to My Home Page</h1>
-        <p>This is a simple home page with a responsive navigation bar.</p>
-    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Cure <span>Connect</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1 class="hero-title">Welcome to CureConnect</h1>
+            <p class="hero-subtitle">Your AI-powered healthcare assistant for fast diagnosis, smart appointments, and expert guidance.</p>
+            <button onclick="scrollToServices()">Get Started</button>
+        </div>
+    </section>
+    
+    
+    <!-- Features Section -->
+    
+    <section id="services" style="background: #000; color: #fff; padding: 80px 0; text-align: center;">
+        <div style="max-width: 900px; margin: auto;">
+            <h2 style="font-size: 2.5rem; font-weight: bold;">About <span style="color: cyan;">CureConnect</span></h2>
+            <p style="font-size: 1.2rem; margin: 20px 0; opacity: 0.8;">
+                CureConnect is your AI-powered healthcare assistant, revolutionizing patient care with intelligent diagnosis, 
+                seamless appointment booking, and expert guidance. We bridge the gap between technology and healthcare 
+                to make your experience smoother, faster, and smarter.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 280px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920327.png" width="60" alt="AI Diagnosis">
+                    <h3 style="font-size: 1.5rem; margin-top: 15px;">AI Diagnosis</h3>
+                    <p style="opacity: 0.8;">Get quick and accurate health assessments powered by AI.</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 280px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920332.png" width="60" alt="Easy Appointments">
+                    <h3 style="font-size: 1.5rem; margin-top: 15px;">Easy Appointments</h3>
+                    <p style="opacity: 0.8;">Book appointments instantly with the best-suited doctors.</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; width: 280px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920351.png" width="60" alt="24/7 Assistance">
+                    <h3 style="font-size: 1.5rem; margin-top: 15px;">24/7 Assistance</h3>
+                    <p style="opacity: 0.8;">Get healthcare support anytime, anywhere with our AI chatbot.</p>
+                </div>
+            </div>
+    </section>
+    
+    
+    <div class="testimonial-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-track">
+                <div class="testimonial">
+                    <p>"CureConnect has revolutionized my healthcare experience! Appointments are seamless and quick!"</p>
+                    <strong>- Sarah J.</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"The AI chatbot gave me instant guidance and helped me find the right doctor. 10/10!"</p>
+                    <strong>- Michael R.</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"Booking appointments has never been easier. I highly recommend CureConnect!"</p>
+                    <strong>- Lisa T.</strong>
+                </div>
+                <!-- Repeat testimonials for a seamless infinite loop -->
+                <div class="testimonial">
+                    <p>"CureConnect has revolutionized my healthcare experience! Appointments are seamless and quick!"</p>
+                    <strong>- Sarah J.</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"The AI chatbot gave me instant guidance and helped me find the right doctor. 10/10!"</p>
+                    <strong>- Michael R.</strong>
+                </div>
+                <div class="testimonial">
+                    <p>"Booking appointments has never been easier. I highly recommend CureConnect!"</p>
+                    <strong>- Lisa T.</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cure_Connect. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
