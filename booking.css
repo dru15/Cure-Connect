@@ -1,0 +1,77 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: Poppins, Segoe UI, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  background-image: url(https://images.pexels.com/photos/2130474/pexels-photo-2130474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px #071e54;
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form Elements */
+.elem-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0px 0px 5px rgba(116, 235, 213, 0.5);
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  background: #23c1ae;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #56c7b1;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  form {
+      width: 90%;
+  }
+}
